@@ -1,3 +1,7 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -10,8 +14,33 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= reqire movie
+ *= require framework_and_overrides
+ *= require_self
  */
 
-// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
-@import "bootstrap-sprockets";
-@import "bootstrap";
+.thumbnail {
+  width: 180px !important;
+  height: 265px !important;
+}
+
+.title {
+  text-align: center;
+  display: block;
+}
+
+.form-control {
+  width: 300px;
+}
+
+.info {
+  float: none;
+}
+
+.navbar .navbar-brand {
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
