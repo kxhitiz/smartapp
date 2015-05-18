@@ -16,7 +16,7 @@
 <hr />
 <% if @movies.present? %>
   <h3>
-  <%= "Recommendation for: <em>#{@movies.first.title}</em>".html_safe %>
+  <%= "Movies similar to <em>#{@movies.first.title}</em>".html_safe %>
   </h3>
   <div class="row">
     <% @movies.each do |movie| %>
