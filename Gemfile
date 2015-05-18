@@ -13,6 +13,8 @@ group :development, :test do
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
 end
+gem 'pry'
+gem 'image_suckr'
 gem 'bootstrap-sass'
 gem 'haml-rails'
 gem 'high_voltage'

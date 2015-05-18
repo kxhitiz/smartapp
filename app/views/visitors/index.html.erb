@@ -1,1 +1,62 @@
-<h3>Welcome</h3>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<center>
+<%= form_tag "/", {:method => :get} do %>
+  <div class = "navbar-brand info">I recently watched</div>
+  <%= text_field_tag "movie_id", "", class: 'form-control' %>
+  <br />
+  <br />
+  <%= submit_tag "Get Recommendations", class: "btn btn-primary btn-lg" %>
+<% end %>
+</center>
+<hr />
+<% if @movies.present? %>
+  <h3>
+  <%= "Recommendation for: <em>#{@movies.first.title}</em>".html_safe %>
+  </h3>
+  <div class="row">
+    <% @movies.each do |movie| %>
+      <div class="col-xs-6 col-md-3">
+        <a href="#" class="thumbnail">
+          <% suckr = ImageSuckr::GoogleSuckr.new %>
+          <%= image_tag suckr.get_image_url({"q" => movie.similarTitle}) %>
+          <span class = "title">
+            <%= movie.similarTitle %>
+          </span>
+        </a>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<style>
+  .thumbnail {
+    width: 180px;
+    height: 265px;
+  }
+
+  .title {
+    text-align: center;
+    display: block;
+  }
+
+  .form-control {
+    width: 300px;
+  }
+
+  .info {
+    float: none;
+  }
+
+  .navbar .navbar-brand {
+    font-size: 25px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+</style>
