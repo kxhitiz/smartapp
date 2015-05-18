@@ -1,5 +1,7 @@
 Smartapp
 ================
+**SmartApp aims to provide smart recommendation on Movie based on your past taste.**
+Our backend engine repo is [here](https://github.com/prayagupd/smartad/tree/master/smartad-backend/smartad-recommendation-engine)
 
 This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
 provided by the [RailsApps Project](http://railsapps.github.io/).
